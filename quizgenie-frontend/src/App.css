@@ -1,0 +1,222 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #f1f5f9;
+  --accent: #fbbf24;
+  --card-shadow: 0 2px 16px 0 rgba(37, 99, 235, 0.06), 0 1.5px 4px rgba(0,0,0,0.03);
+  --radius: 12px;
+  --space: 1.5rem;
+  --transition: 0.12s cubic-bezier(.38,1.23,.52,1.07);
+  --text-main: #1e293b;
+  --bg-main: #f8fafc;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background: var(--secondary);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--radius);
+  padding: 2.25rem 2.5rem 2.5rem 2.5rem;
+  margin: 2rem 0 1rem 0;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topic-input {
+  font-size: 1.15rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 7px;
+  border: 1px solid #dbeafe;
+  background: #fff;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  padding: 0.6rem 1.3rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0.8rem 0 0.1rem 0;
+  transition: background var(--transition);
+}
+
+.primary-btn:disabled {
+  background: #a5b4fc;
+  color: #e0e7ef;
+  cursor: not-allowed;
+}
+
+.option-list {
+  margin: 1.2rem 0 0.3rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.option-radio {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #e0e7ef;
+  padding: 0.67rem 0.95rem;
+  border-radius: 7px;
+  transition: border var(--transition);
+  cursor: pointer;
+}
+.option-radio input[type="radio"] {
+  margin-right: 0.85rem;
+}
+.option-radio.selected {
+  border-color: var(--accent);
+  background: #fef9c3;
+}
+
+.question-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.quiz-progress {
+  color: var(--accent);
+  font-size: 1.01rem;
+  font-weight: 600;
+  margin-bottom: 0.31rem;
+  margin-top: -0.8rem;
+}
+
+.explanation-box {
+  background: #fffbea;
+  color: #a16207;
+  border-left: 4px solid var(--accent);
+  margin: 1.1rem 0 0.35rem 0;
+  padding: 0.77rem 1.16rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  box-shadow: 0 0.5px 2px #ffc30011;
+}
+
+.answer-row {
+  margin: 2rem 0 0.32rem 0;
+  font-size: 1.13rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+.result-summary {
+  color: var(--primary);
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.result-box {
+  background: #f4faff;
+  border-radius: 10px;
+  padding: 1rem 1.3rem 0.8rem 1.3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.result-row {
+  margin-bottom: 0.7rem;
+  font-size: 1.02rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.result-icon {
+  font-size: 1.11rem;
+  width: 1.6em;
+  height: 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  margin-top: 4.5rem;
+  text-align: center;
+  font-size: 0.97rem;
+  color: #64748b;
+}
+
+.loading {
+  margin: 2.3rem auto;
+  color: var(--primary);
+  font-size: 1.13rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.error-banner {
+  background: #ffebee;
+  color: #b91c1c;
+  border-left: 4px solid #ef4444;
+  margin: 0 auto 1.3rem auto;
+  padding: 1.1rem 1.5rem;
+  border-radius: 9px;
+  width: 100%;
+  max-width: 430px;
+  font-size: 1.09rem;
+  box-shadow: 0 1.5px 10px #ef444426;
+}
+
+.retry-area {
+  text-align: center;
+  margin-top: 1.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 540px) {
+  .card {
+    padding: 1.45rem 0.85rem 1.65rem 0.85rem;
+  }
+  .brand-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+}
