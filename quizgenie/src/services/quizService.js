@@ -46,8 +46,8 @@ class QuizService {
     }
 
     // Build prompt for a consistent, parsable response
-    const systemPrompt = "You are QuizGenie, a helpful assistant for generating multiple-choice quizzes for learners.";
-    const userPrompt = `Generate a quiz with ${numQuestions} multiple-choice questions (each with exactly four options, one correct). Topic: "${topic}". Return ONLY a JSON array of objects, each with: question (string), options (array of 4 strings), answer (index 0-3), explanation (string). Example:
+    const systemPrompt = 'You are QuizGenie, a helpful assistant for generating multiple-choice quizzes for learners.';
+    const userPrompt = `Generate a quiz with ${numQuestions} multiple-choice questions (each with exactly four options, one correct). Topic: '${topic}'. Return ONLY a JSON array of objects, each with: question (string), options (array of 4 strings), answer (index 0-3), explanation (string). Example:
 [
   {
     "question": "What is the capital of France?",
@@ -62,8 +62,8 @@ class QuizService {
     const data = {
       model: this.llmModel,
       messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt }
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt }
       ],
       temperature: 0.7,
       max_tokens: 1500
