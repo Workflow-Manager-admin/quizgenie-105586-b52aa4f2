@@ -109,27 +109,27 @@ class QuizService {
         question: `What is ${topic} mainly known for?`,
         options: ['Option A', 'Option B', `${topic}`, 'Option D'],
         answer: 2,
-        explanation: `The correct answer is "${topic}" because it relates to the topic you specified.`,
+        explanation: `The correct answer is '${topic}' because it relates to the topic you specified.`,
       },
       {
         question: `Which of these is most correctly associated with ${topic}?`,
         options: ['Example A', 'Example B', 'Example C', `${topic}`],
         answer: 3,
-        explanation: `Option 4 directly states the topic.`,
+        explanation: 'Option 4 directly states the topic.',
       },
       {
         question: `Select the correct statement about ${topic}.`,
         options: [
-          `"${topic}" is an animal.`,
-          `"${topic}" is a quiz topic.`,
-          `"${topic}" is a programming language.`,
-          `"${topic}" is a type of food.`
+          `'${topic}' is an animal.`,
+          `'${topic}' is a quiz topic.`,
+          `'${topic}' is a programming language.`,
+          `'${topic}' is a type of food.`
         ],
         answer: 1,
-        explanation: `You chose "${topic}" as your topic, so Option 2 is true.`,
+        explanation: `You chose '${topic}' as your topic, so Option 2 is true.`,
       },
       {
-        question: `A quiz generated about "${topic}" would likely include:`,
+        question: `A quiz generated about '${topic}' would likely include:`,
         options: [
           'Unrelated trivia',
           `Facts about ${topic}`,
@@ -137,13 +137,13 @@ class QuizService {
           'Travel destinations'
         ],
         answer: 1,
-        explanation: `Option 2 references the quiz topic.`,
+        explanation: 'Option 2 references the quiz topic.',
       },
       {
-        question: `How many answer choices does each quiz question have in QuizGenie?`,
+        question: 'How many answer choices does each quiz question have in QuizGenie?',
         options: ['2', '3', '4', '5'],
         answer: 2,
-        explanation: `Each question in QuizGenie offers 4 choices.`,
+        explanation: 'Each question in QuizGenie offers 4 choices.',
       }
     ];
     // Repeat/rotate dummy questions if more needed
